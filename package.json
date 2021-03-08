@@ -1,5 +1,5 @@
 {
-  "name": "kz-cli",
+  "name": "kruzer-cli",
   "bin": {
     "kz": "index.js"
   },
@@ -14,7 +14,18 @@
   "dependencies": {
     "chalk": "^4.1.0",
     "commander": "^7.1.0",
-    "inquirer": "^8.0.0",
     "pluralize": "^8.0.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AllanLancioni/kz-cli.git"
+  },
+  "keywords": [
+    "kruzer"
+  ],
+  "bugs": {
+    "url": "https://github.com/AllanLancioni/kz-cli/issues"
+  },
+  "homepage": "https://github.com/AllanLancioni/kz-cli#readme"
 }

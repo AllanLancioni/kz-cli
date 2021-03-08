@@ -7,7 +7,7 @@ class Generator {
   module = null;
   number = null;
   moduleFolder = null;
-  templateFolder = "./templates";
+  templateFolder = `${__dirname}/../templates`;
   baseFolder = "./src/features";
   templates = {
     route: `${this.templateFolder}/route.txt`,
@@ -27,6 +27,7 @@ class Generator {
   }
 
   generate() {
+    console.log(__dirname);
     this._generateModuleFolderName();
     this._checkDirRec(this.moduleFolder);
     this._generateRoutesFile();
