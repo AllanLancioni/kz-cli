@@ -1,0 +1,41 @@
+const { DictionaryController } = require('@kruzer/sdk-private');
+
+class Controller extends DictionaryController {
+    async list(ctx) {
+        await this.ok(ctx, async () => await ctx.services.%replacer1%.list(ctx));
+    }
+
+    async getById(ctx) {
+        ctx.asserts = [
+            { parent: ctx.params, field: '%replacer2%Id', _id: 400 }
+        ]
+        await this.ok(ctx, async () => await ctx.services.%replacer1%.getById(ctx, ctx.params.%replacer2%Id));
+    }
+
+    async create(ctx) {
+        ctx.asserts = [
+        ]
+        await this.created(ctx, async () => await ctx.services.%replacer1%.insertOne(ctx));
+    }
+
+    async update(ctx) {
+        ctx.asserts = [
+            { parent: ctx.params, field: '%replacer2%Id', _id: 400 }
+        ]
+
+        await this.noContent(ctx, async () => await ctx.services.%replacer1%.updateOne(ctx, {
+            query: { _id: ctx.params.%replacer2%Id },
+            body: ctx.request.body
+        }));
+    }
+
+    async delete(ctx) {
+        ctx.asserts = [
+            { parent: ctx.params, field: '%replacer2%Id', _id: 400 }
+        ]
+
+        await this.noContent(ctx, async () => await ctx.services.%replacer1%.deleteOneLogic(ctx, { _id: ctx.params.%replacer2%Id }));
+    }
+}
+
+module.exports = new Controller();

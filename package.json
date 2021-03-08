@@ -1,0 +1,20 @@
+{
+  "name": "kz-cli",
+  "bin": {
+    "kz": "index.js"
+  },
+  "version": "1.0.0",
+  "description": "Ecosystem Kruzer CLI ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Allan Lancioni",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "commander": "^7.1.0",
+    "inquirer": "^8.0.0",
+    "pluralize": "^8.0.0"
+  }
+}

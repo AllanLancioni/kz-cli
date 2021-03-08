@@ -1,0 +1,6 @@
+
+    router.get('/%replacer1%', guard.Anonymous, async (ctx) => %replacer2%Controller.list(ctx));
+    router.get('/%replacer1%/:%replacer2%Id', guard.Anonymous, async (ctx) => %replacer2%Controller.getById(ctx));
+    router.post('/%replacer1%', guard.Anonymous, async (ctx) => %replacer2%Controller.create(ctx));
+    router.put('/%replacer1%/:%replacer2%Id', guard.Anonymous, async (ctx) => %replacer2%Controller.update(ctx));
+    router.delete('/%replacer1%/:%replacer2%Id', guard.Anonymous, async (ctx) => %replacer2%Controller.delete(ctx));

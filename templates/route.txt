@@ -1,0 +1,10 @@
+const Router = require("koa-router");
+const guard = require("../../_shared/security/guard.middleware");
+
+module.exports = (server) => {
+    const router = new Router({
+        prefix: `/api/%replacer1%`,
+    });
+
+    server.use(router.routes());
+};
